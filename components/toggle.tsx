@@ -34,11 +34,10 @@ export function Toggle() {
       <Switch
         onChange={changeTheme}
         checked={darkMode ? true : false}
-        className={`relative inline-flex items-center rounded-full border border-zinc-200 py-1.5 px-2 shadow-lg 
-        shadow-zinc-800/5 transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-zinc-700/40 ${
+        className={`relative inline-flex items-center rounded-full border border-zinc-400/40 py-1.5 px-2 shadow-lg shadow-zinc-800/5 drop-shadow-md transition-colors duration-500 dark:border-zinc-700/40 ${
           darkMode
             ? 'bg-zinc-700 text-zinc-400 focus-visible:ring-zinc-50'
-            : 'bg-zinc-300 text-gray-900 focus-visible:ring-zinc-50'
+            : 'bg-white text-gray-900 focus-visible:ring-zinc-50'
         }`}
       >
         <span className="sr-only">Disable dark mode</span>
@@ -73,7 +72,7 @@ export function Toggle() {
           height="24"
           fill="none"
           aria-hidden="true"
-          className={`ml-3.5 transform text-white transition-transform duration-500 ${
+          className={`ml-3.5 transform text-zinc-400 transition-transform duration-500 ${
             darkMode ? 'scale-0' : 'scale-100'
           }`}
         >
@@ -87,7 +86,7 @@ export function Toggle() {
           ></path>
         </svg>
         <span
-          className={`absolute top-0.5 left-0.5 flex h-8 w-8 transform items-center justify-center rounded-full bg-white shadow-lg shadow-zinc-800/5 transition duration-500 ${
+          className={`absolute top-0.5 left-0.5 flex h-8 w-8 transform items-center justify-center rounded-full border border-zinc-400/40 bg-white shadow-lg shadow-zinc-800/5 drop-shadow-md transition duration-500 ${
             darkMode ? 'translate-x-[2.625rem]' : ''
           }`}
         >
@@ -96,7 +95,7 @@ export function Toggle() {
             height="24"
             fill="none"
             aria-hidden="true"
-            className={`flex-none transform text-zinc-500 transition duration-300 ${
+            className={`flex-none transform text-amber-500 transition duration-300 ${
               darkMode ? 'scale-0 opacity-0' : 'scale-100 opacity-100'
             }`}
           >

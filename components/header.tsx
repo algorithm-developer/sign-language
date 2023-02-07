@@ -38,7 +38,7 @@ export function Header() {
               <Popover className="relative">
                 {({ open }) => (
                   <>
-                    <Popover.Button className="dark:text-zinc focus:ring-grey-500 group inline-flex items-center rounded-md px-2 text-base font-medium text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 focus:outline-none focus:ring-1 dark:text-zinc-100 dark:hover:text-orange-500 dark:focus:ring-orange-500">
+                    <Popover.Button className="dark:text-zinc focus:ring-grey-500 group inline-flex items-center rounded-md px-2 text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 focus:outline-none focus:ring-1 dark:text-zinc-100 dark:hover:text-orange-500 dark:focus:ring-orange-500">
                       <span>Categories</span>
                       <ChevronDownIcon
                         className={clx(
@@ -67,7 +67,7 @@ export function Header() {
                               <Link
                                 key={item.id}
                                 href={item.href}
-                                className="-m-3 flex items-start rounded-lg border border-zinc-200 p-3 hover:bg-gray-50 dark:border-zinc-700/40 dark:hover:bg-zinc-500"
+                                className="-m-3 flex items-start rounded-lg border border-zinc-200 p-3 hover:bg-zinc-200 dark:border-zinc-700/40 dark:hover:bg-zinc-500"
                               >
                                 <div
                                   className={clx(
@@ -78,10 +78,10 @@ export function Header() {
                                   {item.initials}
                                 </div>
                                 <div className="ml-4">
-                                  <p className="text-base text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
+                                  <p className="text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
                                     {item.title}
                                   </p>
-                                  <p className="text-sm text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
+                                  <p className="text-sm font-medium text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
                                     {item.subTitle}
                                   </p>
                                 </div>
@@ -96,13 +96,13 @@ export function Header() {
               </Popover>
               <Link
                 href="/about"
-                className="text-base text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
+                className="text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
               >
                 About
               </Link>
               <a
                 href="contact"
-                className="text-base text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
+                className="text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
               >
                 Contact
               </a>
@@ -143,7 +143,7 @@ export function Header() {
                       <Link
                         key={item.id}
                         href={item.href}
-                        className="-m-3 flex items-center rounded-lg border border-zinc-200 p-3 hover:bg-gray-50 dark:border-zinc-700/40 dark:hover:bg-zinc-500"
+                        className="-m-3 flex items-center rounded-lg border border-zinc-200 p-3 hover:bg-zinc-200 dark:border-zinc-700/40 dark:hover:bg-zinc-500"
                       >
                         <div
                           className={clx(
@@ -153,9 +153,9 @@ export function Header() {
                         >
                           {item.initials}
                         </div>
-                        <div className="ml-4 text-base text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
+                        <div className="ml-4 text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
                           {item.title}
-                          <p className="block text-sm text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
+                          <p className="block text-sm font-medium text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
                             {item.subTitle}
                           </p>
                         </div>

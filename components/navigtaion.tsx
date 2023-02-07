@@ -16,7 +16,7 @@ export function Navigation({ categories }: NavigationProps) {
           <Link
             key={item.id}
             href={item.href}
-            className="col-span-1 flex rounded-md shadow-sm "
+            className="group col-span-1 flex rounded-md border border-zinc-200 bg-zinc-100 shadow-md shadow-zinc-400/40 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:border-zinc-700/40 dark:bg-zinc-900 dark:shadow-zinc-800/40"
           >
             <div
               className={clx(
@@ -26,9 +26,9 @@ export function Navigation({ categories }: NavigationProps) {
             >
               {item.initials}
             </div>
-            <div className="flex flex-1 items-center justify-between truncate rounded-r-md  border border-zinc-200 bg-zinc-100 hover:border-zinc-900 dark:border-zinc-700/40 dark:bg-zinc-900 dark:hover:border-zinc-100">
+            <div className="flex flex-1 items-center justify-between truncate rounded-r-md bg-white group-hover:bg-zinc-200 dark:bg-zinc-900 dark:group-hover:bg-zinc-700">
               <div className="flex-1 truncate px-4 py-2 text-sm">
-                <span className="font-semibold text-gray-900 hover:text-gray-600 dark:text-zinc-100">
+                <span className="font-semibold text-gray-900 dark:text-zinc-100">
                   {item.title}
                 </span>
                 <p className="font-semibold text-gray-500 dark:text-zinc-400">
@@ -38,13 +38,9 @@ export function Navigation({ categories }: NavigationProps) {
               <div className="flex-shrink-0 pr-2">
                 <button
                   type="button"
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white bg-transparent text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent text-sm font-medium text-zinc-900 shadow-md shadow-zinc-400/40 ring-1 ring-zinc-200 group-hover:ring-zinc-100 dark:text-zinc-100 dark:shadow-zinc-800/40 dark:ring-zinc-700/40 dark:group-hover:ring-zinc-800"
                 >
-                  <span className="sr-only">Open options</span>
-                  <EllipsisVerticalIcon
-                    className="h-5 w-5"
-                    aria-hidden="true"
-                  />
+                  {item.members}
                 </button>
               </div>
             </div>
