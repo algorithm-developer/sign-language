@@ -3,6 +3,7 @@ import '@/styles/tailwind.css'
 import { Analytics } from '@/components/utils/analytics'
 import { TailwindIndicator } from '@/components/utils/tailwind-indicator'
 import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 import { usePathname } from 'next/navigation'
 import { categories } from '@/db/categories'
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <div className="mx-auto max-w-5xl border border-zinc-200 bg-white shadow-lg shadow-zinc-800/5 dark:border-zinc-700/40 dark:bg-zinc-900">
             <Header />
             {children}
+            <Footer/>
           </div>
         </div>
         <Analytics />

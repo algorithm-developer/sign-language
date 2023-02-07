@@ -6,7 +6,7 @@ export function Logo() {
       height="48"
       width="48"
       viewBox="0 0 48 48"
-      className="h-10 w-10"
+      className="h-14 w-14"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g>

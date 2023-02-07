@@ -16,7 +16,7 @@ export function Navigation({ categories }: NavigationProps) {
           <Link
             key={item.id}
             href={item.href}
-            className="col-span-1 flex rounded-md shadow-sm"
+            className="col-span-1 flex rounded-md shadow-sm "
           >
             <div
               className={clx(

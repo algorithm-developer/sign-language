@@ -23,12 +23,12 @@ export function Header() {
         <div className="flex items-center justify-between p-6 md:justify-start md:space-x-10">
           <div>
             <Link href="/" className="flex">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">Logo </span>
               <Logo />
             </Link>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
-            <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <Popover.Button className="focus:ring-insetdark:bg-zinc-700 inline-flex items-center justify-center rounded-md p-2 text-gray-900 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/10 hover:text-zinc-900 focus:outline-none focus:ring-2 dark:text-zinc-400 dark:ring-zinc-600">
               <span className="sr-only">Open menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -38,17 +38,14 @@ export function Header() {
               <Popover className="relative">
                 {({ open }) => (
                   <>
-                    <Popover.Button
-                      className={clx(
-                        open ? 'text-gray-900' : 'text-gray-500',
-                        'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
-                      )}
-                    >
-                      <span>Solutions</span>
+                    <Popover.Button className="dark:text-zinc focus:ring-grey-500 group inline-flex items-center rounded-md px-2 text-base font-medium text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 focus:outline-none focus:ring-1 dark:text-zinc-100 dark:hover:text-orange-500 dark:focus:ring-orange-500">
+                      <span>Categories</span>
                       <ChevronDownIcon
                         className={clx(
-                          open ? 'text-gray-600' : 'text-gray-400',
-                          'ml-2 h-5 w-5 group-hover:text-gray-500'
+                          open
+                            ? 'text-gray-500 dark:text-orange-500'
+                            : 'text-gray-900 dark:text-zinc-100',
+                          'ml-2 h-5 w-5 group-hover:text-gray-500 dark:group-hover:text-orange-500'
                         )}
                         aria-hidden="true"
                       />
@@ -65,45 +62,31 @@ export function Header() {
                     >
                       <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform lg:max-w-3xl">
                         <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                          <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                          <div className="relative grid gap-6 border-b border-zinc-200 bg-zinc-100 px-5 py-6 dark:border-zinc-700/40 dark:bg-zinc-800 sm:gap-8 sm:p-8 lg:grid-cols-2">
                             {categories.map((item) => (
-                              <a
+                              <Link
                                 key={item.id}
                                 href={item.href}
-                                className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                                className="-m-3 flex items-start rounded-lg border border-zinc-200 p-3 hover:bg-gray-50 dark:border-zinc-700/40 dark:hover:bg-zinc-500"
                               >
-                                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
+                                <div
+                                  className={clx(
+                                    item.bgColor,
+                                    'flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12'
+                                  )}
+                                >
                                   {item.initials}
                                 </div>
                                 <div className="ml-4">
-                                  <p className="text-base font-medium text-gray-900">
+                                  <p className="text-base text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
                                     {item.title}
                                   </p>
-                                  <p className="mt-1 text-sm text-gray-500">
+                                  <p className="text-sm text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
                                     {item.subTitle}
                                   </p>
                                 </div>
-                              </a>
+                              </Link>
                             ))}
-                          </div>
-                          <div className="bg-gray-50 p-5 sm:p-8">
-                            <a
-                              href="#"
-                              className="-m-3 flow-root rounded-md p-3 hover:bg-gray-100"
-                            >
-                              <div className="flex items-center">
-                                <div className="text-base font-medium text-gray-900">
-                                  Enterprise
-                                </div>
-                                <span className="ml-3 inline-flex items-center rounded-full bg-indigo-100 px-3 py-0.5 text-xs font-medium leading-5 text-indigo-800">
-                                  New
-                                </span>
-                              </div>
-                              <p className="mt-1 text-sm text-gray-500">
-                                Empower your entire team with even more advanced
-                                tools.
-                              </p>
-                            </a>
                           </div>
                         </div>
                       </Popover.Panel>
@@ -111,17 +94,17 @@ export function Header() {
                   </>
                 )}
               </Popover>
-              <a
-                href="#"
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
+              <Link
+                href="/about"
+                className="text-base text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
               >
-                Pricing
-              </a>
+                About
+              </Link>
               <a
-                href="#"
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
+                href="contact"
+                className="text-base text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
               >
-                Docs
+                Contact
               </a>
             </Popover.Group>
             <div className="flex items-center md:ml-12">
@@ -146,15 +129,9 @@ export function Header() {
             <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="px-5 pt-5 pb-6">
                 <div className="flex items-center justify-between">
-                  <div>
-                    <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                      alt="Your Company"
-                    />
-                  </div>
+                  <Logo />
                   <div className="-mr-2">
-                    <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <Popover.Button className="focus:ring-insetdark:bg-zinc-700 inline-flex items-center justify-center rounded-md p-2 text-gray-900 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/10 hover:text-zinc-900 focus:outline-none focus:ring-2 dark:text-zinc-400 dark:ring-zinc-600">
                       <span className="sr-only">Close menu</span>
                       <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
