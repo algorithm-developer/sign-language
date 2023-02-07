@@ -15,6 +15,7 @@ export function Colors() {
       <div className="bg-blue-600"></div>
       <div className="bg-teal-600"></div>
       <div className="bg-emerald-600"></div>
+      <div className="bg-indigo-600"></div>
     </>
   )
 }

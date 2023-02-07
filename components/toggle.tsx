@@ -34,11 +34,11 @@ export function Toggle() {
       <Switch
         onChange={changeTheme}
         checked={darkMode ? true : false}
-        className={`relative inline-flex items-center rounded-full py-1.5 px-2 shadow-lg shadow-zinc-800/5 transition-colors 
-        duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white ${
+        className={`relative inline-flex items-center rounded-full border border-zinc-200 py-1.5 px-2 shadow-lg 
+        shadow-zinc-800/5 transition-colors duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-zinc-700/40 ${
           darkMode
             ? 'bg-zinc-700 text-zinc-400 focus-visible:ring-zinc-50'
-            : 'bg-gray-500 text-gray-900 focus-visible:ring-zinc-50'
+            : 'bg-zinc-300 text-gray-900 focus-visible:ring-zinc-50'
         }`}
       >
         <span className="sr-only">Disable dark mode</span>
@@ -96,7 +96,7 @@ export function Toggle() {
             height="24"
             fill="none"
             aria-hidden="true"
-            className={`flex-none transform text-gray-500 transition duration-300 ${
+            className={`flex-none transform text-zinc-500 transition duration-300 ${
               darkMode ? 'scale-0 opacity-0' : 'scale-100 opacity-100'
             }`}
           >

@@ -10,6 +10,14 @@ export function Footer() {
         >
           <div className="px-5 py-2">
             <Link
+              href="/"
+              className="text-base text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
+            >
+              Home
+            </Link>
+          </div>
+          <div className="px-5 py-2">
+            <Link
               href="/about"
               className="text-base text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
             >

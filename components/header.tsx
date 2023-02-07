@@ -19,7 +19,7 @@ export function Header() {
       : pathName
   return (
     <>
-      <Popover className="relative border-b border-zinc-200 pb-3 dark:border-slate-700/40">
+      <Popover className="relative border border-zinc-200 pb-3 dark:border-slate-700/40">
         <div className="flex items-center justify-between p-6 md:justify-start md:space-x-10">
           <div>
             <Link href="/" className="flex">
@@ -28,7 +28,7 @@ export function Header() {
             </Link>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
-            <Popover.Button className="focus:ring-insetdark:bg-zinc-700 inline-flex items-center justify-center rounded-md p-2 text-gray-900 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/10 hover:text-zinc-900 focus:outline-none focus:ring-2 dark:text-zinc-400 dark:ring-zinc-600">
+            <Popover.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-900 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/10 hover:text-zinc-900 focus:outline-none focus:ring-2 focus:ring-inset dark:bg-zinc-700 dark:text-zinc-400 dark:ring-zinc-600">
               <span className="sr-only">Open menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -126,7 +126,7 @@ export function Header() {
             focus
             className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
           >
-            <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+            <div className="divide-y-2 divide-gray-50 rounded-lg border-b border-zinc-200 bg-zinc-100 shadow-lg ring-1 ring-black ring-opacity-5 dark:border-zinc-700/40 dark:bg-zinc-800">
               <div className="px-5 pt-5 pb-6">
                 <div className="flex items-center justify-between">
                   <Logo />
@@ -140,18 +140,26 @@ export function Header() {
                 <div className="mt-6">
                   <nav className="grid gap-6">
                     {categories.map((item) => (
-                      <a
+                      <Link
                         key={item.id}
                         href={item.href}
-                        className="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50"
+                        className="-m-3 flex items-center rounded-lg border border-zinc-200 p-3 hover:bg-gray-50 dark:border-zinc-700/40 dark:hover:bg-zinc-500"
                       >
-                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white">
+                        <div
+                          className={clx(
+                            item.bgColor,
+                            'flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12'
+                          )}
+                        >
                           {item.initials}
                         </div>
-                        <div className="ml-4 text-base font-medium text-gray-900">
+                        <div className="ml-4 text-base text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
                           {item.title}
+                          <p className="block text-sm text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
+                            {item.subTitle}
+                          </p>
                         </div>
-                      </a>
+                      </Link>
                     ))}
                   </nav>
                 </div>
