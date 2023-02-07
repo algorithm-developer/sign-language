@@ -19,7 +19,16 @@ export function Header() {
       : pathName
   return (
     <>
-      <Popover className="relative border border-zinc-200 pb-3 dark:border-slate-700/40">
+      <Popover
+        as="nav"
+        className="border-zinc-20 bg-grid-slate-900/[0.04] dark:bg-grid-slate-400/[0.05] supports-backdrop-blur:bg-white/60 sticky top-0 z-40 w-full flex-none 
+      border border-b 
+      border-slate-900/10 bg-opacity-40 pb-3 opacity-100 
+      backdrop-blur-xl
+      backdrop-filter 
+      transition-colors 
+      duration-500 dark:border-b dark:border-slate-700/40"
+      >
         <div className="flex items-center justify-between p-6 md:justify-start md:space-x-10">
           <div>
             <Link href="/" className="flex">
