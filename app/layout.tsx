@@ -1,18 +1,30 @@
-import './globals.css'
+'use client'
+import '@/styles/tailwind.css'
+import { Analytics } from '@/components/utils/analytics'
+import { TailwindIndicator } from '@/components/utils/tailwind-indicator'
+import { Header } from '@/components/header'
+import { usePathname } from 'next/navigation'
+import { categories } from '@/db/categories'
 
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutProps {
   children: React.ReactNode
-}) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
+  const pathName = usePathname()
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang="en" className="h-full">
       <head />
-      <body>{children}</body>
+      <body className="bg-zinc-50 antialiased dark:bg-zinc-800">
+        <div className="max-w-7x mx-auto">
+          <div className="mx-auto max-w-5xl border border-zinc-200 bg-white shadow-lg shadow-zinc-800/5 dark:border-zinc-700/40 dark:bg-zinc-900">
+            <Header />
+            {children}
+          </div>
+        </div>
+        <Analytics />
+        <TailwindIndicator />
+      </body>
     </html>
   )
 }

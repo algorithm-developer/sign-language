@@ -25,11 +25,10 @@
       "@/*": ["./*"],
       "@/components/*": ["components/*"],
       "@/ui/*": ["ui/*"],
-      "@/libs/*": ["libs/*"],
+      "@/lib/*": ["lib/*"],
       "@/config/*": ["config/*"],
-      "@/types/*": ["types/*"],
-      "@/styles/*": ["styles/*"],
-      "@/db/*": ["db/*"]
+      "@/icons/*": ["icons/*"],
+      "@/styles/*": ["styles/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
