@@ -25,7 +25,7 @@ export function CategoryItems({ words }: CategoryItemsProps) {
                     aria-hidden="true"
                   >
                     <div className="w-full rounded-md bg-white bg-opacity-75 py-2 px-4 text-center text-sm font-medium text-gray-900 backdrop-blur backdrop-filter">
-                      Quick views
+                      Quick view
                     </div>
                   </div>
                 </div>

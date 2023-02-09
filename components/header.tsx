@@ -110,12 +110,6 @@ export function Header() {
                   </>
                 )}
               </Popover>
-              <Link
-                href="/about"
-                className="text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
-              >
-                About
-              </Link>
               <a
                 href="contact"
                 className="text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
@@ -161,16 +155,7 @@ export function Header() {
                       className="flex items-center rounded-lg border border-zinc-200 p-3 hover:bg-zinc-200 dark:border-zinc-700/40 dark:hover:bg-zinc-500"
                     >
                       <div className="ml-4 text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
-                        Category
-                      </div>
-                    </Link>
-                    <Link
-                      key="about"
-                      href="/about"
-                      className="flex items-center rounded-lg border border-zinc-200 p-3 hover:bg-zinc-200 dark:border-zinc-700/40 dark:hover:bg-zinc-500"
-                    >
-                      <div className="ml-4 text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
-                        About
+                        Categories
                       </div>
                     </Link>
                     <Link

@@ -21,14 +21,6 @@ export function Footer() {
               href="/about"
               className="text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
             >
-              About
-            </Link>
-          </div>
-          <div className="px-5 py-2">
-            <Link
-              href="/about"
-              className="text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
-            >
               Contact
             </Link>
           </div>
