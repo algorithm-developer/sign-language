@@ -9,6 +9,7 @@ import { Logo } from '@/components/logo'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Toggle } from '@/components/toggle'
+import Icon from '@/components/icon'
 
 export function Header() {
   const pathName = usePathname()
@@ -76,7 +77,7 @@ export function Header() {
                               <Link
                                 key={item.id}
                                 href={item.href}
-                                className="-m-3 flex items-start rounded-lg border border-zinc-200 p-3 hover:bg-zinc-200 dark:border-zinc-700/40 dark:hover:bg-zinc-500"
+                                className="-m-3 flex items-start rounded-lg border border-zinc-200 p-3 transition ease-out hover:bg-white dark:border-zinc-700/40 dark:hover:bg-zinc-900"
                               >
                                 <div
                                   className={clx(
@@ -84,13 +85,13 @@ export function Header() {
                                     'flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12'
                                   )}
                                 >
-                                  {item.initials}
+                                  <Icon slug={item.slug} />
                                 </div>
                                 <div className="ml-4">
-                                  <p className="text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
+                                  <p className="text-base font-semibold text-gray-900 transition duration-500 ease-in-out  dark:text-zinc-100 ">
                                     {item.title}
                                   </p>
-                                  <p className="text-sm font-medium text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
+                                  <p className="text-sm font-medium text-gray-900 transition duration-500 ease-in-out  dark:text-zinc-100 ">
                                     {item.subTitle}
                                   </p>
                                 </div>
@@ -147,29 +148,34 @@ export function Header() {
                   </div>
                 </div>
                 <div className="mt-6">
-                  <nav className="grid gap-6">
-                    {categories.map((item) => (
-                      <Link
-                        key={item.id}
-                        href={item.href}
-                        className="-m-3 flex items-center rounded-lg border border-zinc-200 p-3 hover:bg-zinc-200 dark:border-zinc-700/40 dark:hover:bg-zinc-500"
-                      >
-                        <div
-                          className={clx(
-                            item.bgColor,
-                            'flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12'
-                          )}
-                        >
-                          {item.initials}
-                        </div>
-                        <div className="ml-4 text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
-                          {item.title}
-                          <p className="block text-sm font-medium text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
-                            {item.subTitle}
-                          </p>
-                        </div>
-                      </Link>
-                    ))}
+                  <nav className="grid gap-2">
+                    <Link
+                      key="category"
+                      href="/"
+                      className="flex items-center rounded-lg border border-zinc-200 p-3 hover:bg-zinc-200 dark:border-zinc-700/40 dark:hover:bg-zinc-500"
+                    >
+                      <div className="ml-4 text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
+                        Category
+                      </div>
+                    </Link>
+                    <Link
+                      key="about"
+                      href="/about"
+                      className="flex items-center rounded-lg border border-zinc-200 p-3 hover:bg-zinc-200 dark:border-zinc-700/40 dark:hover:bg-zinc-500"
+                    >
+                      <div className="ml-4 text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
+                        About
+                      </div>
+                    </Link>
+                    <Link
+                      key="contact"
+                      href="/contact"
+                      className="flex items-center rounded-lg border border-zinc-200 p-3 hover:bg-zinc-200 dark:border-zinc-700/40 dark:hover:bg-zinc-500"
+                    >
+                      <div className="ml-4 text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500">
+                        Contact
+                      </div>
+                    </Link>
                   </nav>
                 </div>
               </div>
