@@ -29,7 +29,7 @@ export const categories: Category[] =
             slug: 'animals',
             initials: "AN",
             href: "/category/animals",
-            bgColor: "bg-slate-600",
+            bgColor: "bg-teal-700",
             members: 31
         },
         {
@@ -55,7 +55,7 @@ export const categories: Category[] =
         {
             id: 6,
             title: 'Emotions',
-            subTitle: 'Өнгө',
+            subTitle: 'Сэтгэл хөдлөл',
             slug: 'emotions',
             initials: "EM",
             href: "/category/emotions",
@@ -99,7 +99,7 @@ export const categories: Category[] =
             slug: 'nature',
             initials: "NT",
             href: "/category/nature",
-            bgColor: "bg-slate-600",
+            bgColor: "bg-rose-600",
             members: 14
         },
         {
@@ -115,7 +115,7 @@ export const categories: Category[] =
         {
             id: 12,
             title: 'Pronouns',
-            subTitle: 'Үйл үг',
+            subTitle: 'Төлөөний нэр',
             slug: 'pronouns',
             initials: "PS",
             href: "/category/pronouns",
@@ -126,8 +126,6 @@ export const categories: Category[] =
     ]
 
 export async function getCategories(slug?: string): Promise<Array<Category>> {
-    console.log("This is params")
-    console.log(slug)
     return new Promise((resolve) => {
         if (slug) {
             const category = categories.filter(c => c.slug === slug);
