@@ -45,6 +45,12 @@ export function Header() {
           </div>
           <div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
             <Popover.Group as="nav" className="flex space-x-10">
+              <Link
+                href="/"
+                className="text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
+              >
+                Home
+              </Link>
               <Popover className="relative">
                 {({ open }) => (
                   <>
