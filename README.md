@@ -10,7 +10,7 @@ Mongolian Sign Langugage App Dictionary
 
 SignApp is a free online learning platform for Mongolian Sign Language. SignApp's goal is to facilitate basic communication between the Deaf and hearing communities by providing a high quality online platform for hearing people to learn Mongolian Sign Language.
 
-https://user-images.githubusercontent.com/25026241/217975781-3fa7781a-6184-45b7-8ca6-a79ba57bdad1.mp4
+https://user-images.githubusercontent.com/25026241/218126018-f6bc9500-6655-4bec-a2f8-1e6fa86d65a2.mp4
 
 ### Tech Stack
 
