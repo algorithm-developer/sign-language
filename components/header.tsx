@@ -30,7 +30,7 @@ export function Header() {
       transition-colors 
       duration-500 dark:border-b dark:border-slate-700/40"
       >
-        <div className="flex items-center justify-between p-6 md:justify-start md:space-x-10">
+        <div className="flex items-center justify-between p-6 px-6 py-1 sm:py-6 md:justify-start md:space-x-10">
           <div>
             <Link href="/" className="flex">
               <span className="sr-only">Logo </span>

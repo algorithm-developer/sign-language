@@ -1,6 +1,6 @@
 import { getWordByUid, getWordsByCategory } from '@/db/db'
-import { WordHeading as Heading } from '@/components/word-heading'
-import { WordDetail } from '@/components/word-detail'
+import { CategoryHeading } from '@/components/category-heading'
+import { CategoryItemDetail } from '@/components/category-item-detail'
 
 interface HomeProps {
   params: {
@@ -23,12 +23,8 @@ export default async function Home({ params }: HomeProps) {
   return (
     <>
       <div className="mx-auto max-w-2xl py-12 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <Heading
-          english={word.english}
-          mongolian={word.mongolian}
-          imageUrl={word.thumbnail}
-        />
-        <WordDetail images={word.images} />
+        <CategoryHeading title={word.english + ' / ' + word.mongolian} />
+        <CategoryItemDetail images={word.images} />
       </div>
     </>
   )

@@ -15,10 +15,13 @@ export function CategoryItems({ words }: CategoryItemsProps) {
             <div key={word.uid} className="group relative">
               <Link href={`category/${word.category}/${word.uid}`}>
                 <div className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg bg-gray-100">
-                  <img
+                  <Image
                     src={word.thumbnail}
                     alt={word.english}
                     className="object-cover object-center"
+                    width={210}
+                    height={160}
+                    priority
                   />
                   <div
                     className="flex items-end p-4 opacity-0 group-hover:opacity-100"

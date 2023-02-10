@@ -1,10 +1,10 @@
 import { Slider } from '@/components/slider'
 
-interface WordDetailProps {
+interface CategoryItemDetailProps {
   images: string[]
 }
 
-export function WordDetail({ images }: WordDetailProps) {
+export function CategoryItemDetail({ images }: CategoryItemDetailProps) {
   return (
     <div className="bg-transparent">
       <div className="lg:grid lg:grid-cols-6 lg:items-start lg:gap-x-8">
