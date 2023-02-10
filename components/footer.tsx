@@ -24,6 +24,14 @@ export function Footer() {
               Contact
             </Link>
           </div>
+          <div className="px-5 py-2">
+            <a
+              href="https://github.com/timtbdev/sign-app"
+              className="text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
+            >
+              Github
+            </a>
+          </div>
         </nav>
         <p className="mt-8 text-center text-base font-light text-gray-500 dark:text-zinc-500 sm:text-left">
           Last updated February 2023

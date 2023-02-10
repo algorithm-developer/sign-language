@@ -110,11 +110,17 @@ export function Header() {
                   </>
                 )}
               </Popover>
-              <a
-                href="contact"
+              <Link
+                href="/contact"
                 className="text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
               >
                 Contact
+              </Link>
+              <a
+                href="https://github.com/timtbdev/sign-app"
+                className="text-base font-semibold text-gray-900 transition duration-500 ease-in-out hover:text-gray-500 dark:text-zinc-100 dark:hover:text-orange-500"
+              >
+                Github
               </a>
             </Popover.Group>
             <div className="flex items-center md:ml-12">
