@@ -361,6 +361,14 @@ export const data: Word[] = [
         images: ['/images/numbers/10.jpg'],
         category: "numbers"
     },
+    {
+        uid: "ucQ9Xl",
+        english: 'Giraffe',
+        mongolian: 'Анааш',
+        thumbnail: '/images/animals/giraffe/1.jpg',
+        images: ['/images/animals/giraffe/1.jpg', '/images/animals/giraffe/2.jpg', '/images/animals/giraffe/3.jpg',],
+        category: "animals"
+    },
 
 ]
 
